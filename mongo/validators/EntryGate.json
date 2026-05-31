@@ -1,0 +1,18 @@
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "required": ["EventID", "gateIndex", "createdAt", "updatedAt"],
+    "properties": {
+      "_id": { "bsonType": "objectId" },
+      "EventID": { "bsonType": ["int", "long", "double"] },
+      "gateIndex": { "bsonType": ["int", "long", "double"], "minimum": 1 },
+      "label": { "bsonType": "string" },
+      "jamScore": { "bsonType": ["int", "long", "double"], "minimum": 0, "maximum": 100 },
+      "scansLast15m": { "bsonType": ["int", "long", "double"], "minimum": 0 },
+      "lastScanAt": { "bsonType": ["date", "null"] },
+      "createdAt": { "bsonType": "date" },
+      "updatedAt": { "bsonType": "date" }
+    },
+    "additionalProperties": true
+  }
+}

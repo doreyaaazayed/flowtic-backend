@@ -1,0 +1,16 @@
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "required": ["EventID", "ticketLow", "ticketHigh", "createdBy", "createdAt", "updatedAt"],
+    "properties": {
+      "_id": { "bsonType": "objectId" },
+      "EventID": { "bsonType": ["int", "long", "double"] },
+      "ticketLow": { "bsonType": ["int", "long", "double"] },
+      "ticketHigh": { "bsonType": ["int", "long", "double"] },
+      "createdBy": { "bsonType": "objectId" },
+      "createdAt": { "bsonType": "date" },
+      "updatedAt": { "bsonType": "date" }
+    },
+    "additionalProperties": true
+  }
+}

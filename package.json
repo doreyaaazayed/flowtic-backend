@@ -1,0 +1,36 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "test:api": "node scripts/test-api.js",
+    "clear-events": "node scripts/clearEvents.js",
+    "clear-all": "node scripts/clearAll.js",
+    "seed:food": "node scripts/seedFoodMenus.js",
+    "seed:venue-food": "node scripts/seedVenueFoodMenus.js",
+    "seed:delivery": "node scripts/seedDeliveryMethods.js",
+    "oauth:check": "node scripts/checkOAuthConfig.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@getbrevo/brevo": "^5.0.1",
+    "bcryptjs": "^3.0.3",
+    "body-parser": "^2.2.2",
+    "compression": "^1.8.1",
+    "cors": "^2.8.6",
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "ioredis": "^5.10.1",
+    "jsonrepair": "^3.13.3",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.2.2",
+    "multer": "^2.1.1",
+    "nodemon": "^3.1.14",
+    "sharp": "^0.34.5"
+  }
+}

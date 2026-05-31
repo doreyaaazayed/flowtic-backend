@@ -1,0 +1,17 @@
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "required": ["EventID", "slotIndex", "windowStart", "windowEnd", "maxPerGate", "createdAt", "updatedAt"],
+    "properties": {
+      "_id": { "bsonType": "objectId" },
+      "EventID": { "bsonType": ["int", "long", "double"] },
+      "slotIndex": { "bsonType": ["int", "long", "double"], "minimum": 0 },
+      "windowStart": { "bsonType": "date" },
+      "windowEnd": { "bsonType": "date" },
+      "maxPerGate": { "bsonType": ["int", "long", "double"], "minimum": 1 },
+      "createdAt": { "bsonType": "date" },
+      "updatedAt": { "bsonType": "date" }
+    },
+    "additionalProperties": true
+  }
+}

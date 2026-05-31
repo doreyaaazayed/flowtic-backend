@@ -1,0 +1,2 @@
+username = graduationp395_db_user
+password = PXOQmdBqY5w4Q2gu

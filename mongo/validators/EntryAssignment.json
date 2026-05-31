@@ -1,0 +1,34 @@
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "required": [
+      "EventID",
+      "TicketID",
+      "userId",
+      "gateIndex",
+      "slotIndex",
+      "windowStart",
+      "windowEnd",
+      "status",
+      "createdAt",
+      "updatedAt"
+    ],
+    "properties": {
+      "_id": { "bsonType": "objectId" },
+      "EventID": { "bsonType": ["int", "long", "double"] },
+      "TicketID": { "bsonType": ["int", "long", "double"] },
+      "userId": { "bsonType": "objectId" },
+      "gateIndex": { "bsonType": ["int", "long", "double"], "minimum": 1 },
+      "slotIndex": { "bsonType": ["int", "long", "double"], "minimum": 0 },
+      "windowStart": { "bsonType": "date" },
+      "windowEnd": { "bsonType": "date" },
+      "friendGroupId": { "bsonType": ["string", "null"] },
+      "version": { "bsonType": ["int", "long", "double"], "minimum": 1 },
+      "usedAt": { "bsonType": ["date", "null"] },
+      "status": { "enum": ["active", "used", "void"] },
+      "createdAt": { "bsonType": "date" },
+      "updatedAt": { "bsonType": "date" }
+    },
+    "additionalProperties": true
+  }
+}
