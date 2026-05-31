@@ -12,6 +12,7 @@ const compression = require("compression");
 const path = require("path");
 const os = require("os");
 
+
 const authRoutes = require("./routes/authRoutes");
 const eventRoutes = require("./routes/eventRoutes");
 const venueRoutes = require("./routes/venueRoutes");
@@ -51,6 +52,12 @@ app.use(cors());
 app.use(express.json({ limit: "15mb" }));
 
 // Event hero images (written by eventImageService on create/update)
+app.use("/", (req, res) => {
+  res.json({
+    msg: "done",
+  });
+});
+
 app.use(
   "/api/uploads/events",
   express.static(path.join(__dirname, "uploads", "events"), { maxAge: "7d" }),
